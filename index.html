@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 7</title>
+</head>
+<body>
+    <script>
+
+        /* concat */
+        const arr = ['Lara', 'Jhon', 'Mike'];
+        const arr1 = ['Peter', 'Viki'];
+        const arr2 = arr.concat(arr1);
+        const arr3 = arr.concat('500', '1000');
+        console.log (arr2);
+        console.log (arr3);
+
+        /* Lenght */
+        console.log (arr)
+        console.log (arr.length);
+
+        /* copyWithin */
+        const arr4 = arr.copyWithin(0, 1);
+        console.log (arr4);
+
+        /* entries */
+        const arr5 = arr.entries();
+        console.log(arr5.next().value);
+        console.log(arr5.next().value);
+        console.log(arr5.next().value);
+
+        /* every */
+        const arr6 = [1, 8, 21, 73, 32];
+        function selection (element, index, array) {
+        return element < 30;
+        }
+        console.log (arr6.every(selection));
+
+        /* fill */
+        const arr7 = [1, 2, 3, 'Jhon', 'Alex'];
+        const arr8 = arr7.fill(10);
+        const arr9 = arr6.fill(10, 1, 4);
+        console.log (arr8);
+        console.log (arr9);
+
+        /* filter */
+        const arr10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        function test(element) {
+        return element  > 3
+        }
+        console.log(arr10.filter(test));
+
+        /* find */
+        function test1(element) {
+        return element  > 5
+        }
+        console.log(arr10.find(test1));
+
+        /* findIndex */
+        function test2(element) {
+        return element  > 4
+        }
+        console.log(arr10.findIndex(test2));
+
+        /* flat */
+        console.log(arr10.flat());
+
+        /* flatMap */
+        function test3(element) {
+        return [element * 2]
+        }
+        console.log(arr10.flatMap(test3));
+
+        /* forEach */
+        arr10.forEach(element => console.log(element));
+
+        /* includes */
+        console.log(arr10.includes(4));
+        console.log(arr10.includes(2, 3));
+
+        /* indexOf */
+        const arr11 = ['sky', 'sea', 'wind'];
+        console.log(arr.indexOf('sea'));
+
+         /* Array.isArray */
+         console.log(Array.isArray(arr11));
+
+        /* join */
+        let string = arr11.join(', ');
+        console.log(string);
+
+        /* keys */
+        const test5 = Object.keys(arr11);
+        console.log(test5);
+
+        /* lastIndexOf */
+        console.log(arr11.lastIndexOf('wind'));
+
+        /* map */
+        function test6(element) {
+        return [element * 4]
+        }
+        console.log(arr10.map(test6));
+
+        /* pop */
+        const test7 =  arr10.pop();
+        console.log(test7);
+
+        /* push */
+        const arr12 = arr10.push('man');
+        console.log(arr12);
+
+        /* reduce */
+        let test8 =  arr10.reduce(function(test, element) {
+        return element + test;
+        }, 0);
+        console.log(test8);  
+
+        /* reduceRight */
+        let test9 =  arr10.reduceRight(function(test, element) {
+        return element + test;
+        }, 0);
+        console.log(test9);
+
+        /* reverse */
+        let test10 =  arr10.reverse()
+        console.log(test10);
+
+        /* shift */
+        let test11 =  arr10.shift();
+        console.log(test11);
+
+        /* slice */
+        console.log(arr10.slice(2, 3));
+
+        /* some */
+        let test12 = (function(element) {
+        return element < 7
+        })
+        console.log(arr10.some(test12));
+
+        /* sort */
+        const arr13 = [8, 1, 6, 2, 7, 3,];
+        console.log(arr13.sort());
+
+        /* splice */
+        arr13.splice(3, 0);
+        console.log(arr13);
+     
+        /* toLocaleString */
+        const number = 15;
+        const date = new Date();
+        const arr14 = [number, date];
+        console.log(arr14.toLocaleString());
+
+        /* toString */
+        console.log(arr11.toString());
+
+        /* unshift */
+        const arr15 = ['sea', 'ocean', 'stone'];
+        arr15.unshift(3)
+        console.log(arr15);
+
+        /* values */
+        const arr16 = [10, 12, 21, 40,];
+        let test13 = arr16.values();
+        for (let test14 of test13) {
+        test14 *= 3
+        console.log(test14)
+        };
+
+    </script>
+
+</body>
+</html>
